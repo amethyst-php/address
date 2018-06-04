@@ -4,10 +4,11 @@ namespace Railken\LaraOre\Address\Tests;
 
 use Railken\Bag;
 use Railken\LaraOre\Address\AddressManager;
+use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
 
 class AddressTest extends BaseTest
 {
-    use Traits\CommonTrait;
+    use ManagerTestableTrait;
 
 
     /**
