@@ -21,8 +21,8 @@ In order to access to the data you have three options available: api, manager, c
 
 ## Commands
 
-* [Create an address](commands/create.md)
-* [Update an address](commands/update.md)
+Soon, maybe.
+
 
 ## Common
 
