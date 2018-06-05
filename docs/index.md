@@ -1,12 +1,6 @@
 # Documentation
 
-In order to access to the data you have 3 options: api, manager, commands.
-
-## Common
-
-* [Attributes](common/attributes.md)
-* [Errors](common/errors.md)
-* [Permissions](common/permissions.md)
+In order to access to the data you have three options available: api, manager, commands.
 
 ## Api
 
@@ -29,3 +23,9 @@ In order to access to the data you have 3 options: api, manager, commands.
 
 * [Create an address](commands/create.md)
 * [Update an address](commands/update.md)
+
+## Common
+
+* [Attributes](common/attributes.md)
+* [Errors](common/errors.md)
+* [Permissions](common/permissions.md)
