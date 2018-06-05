@@ -10,11 +10,13 @@ In order to access to the data you have 3 options: api, manager, commands.
 
 ## Api
 
-Prefix: `/api/`
+Prefix: `/api/v1`
 
 ### Admin
 
-Prefix: `/admin/`
+Requires authentication. Please see [lara-ore-user](https://github.com/railken/lara-ore-user) for more details
+
+Prefix: `/admin`
 
 Endpoints for viewing and manipulating the addresses
 
@@ -26,12 +28,12 @@ Endpoints for viewing and manipulating the addresses
 
 ## Manager
 
-* [Introduction](manager/introduction.md)
-* [Permissions](manager/permissions.md)
 * [Create a new entity](manager/create.md)
 * [Update an entity](manager/update.md)
 * [Remove an entity](manager/remove.md)
-* [Repository](manager/repository.md)
+* [Performing queries with the Repository](manager/repository.md)
+* [Handle the result](manager/result.md)
+* [Permissions](manager/permissions.md)
 
 ## Commands
 
