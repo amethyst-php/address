@@ -21,3 +21,7 @@ The package will automatically register itself.
 ## Documentation
 
 [Documentation](docs/index.md)
+
+## Testing
+
+Configure the .env file before launching `./vendor/bin/phpunit`

@@ -4,28 +4,30 @@ In order to access to the data you have 3 options: api, manager, commands.
 
 ## Common
 
+* [Attributes](common/attributes.md)
 * [Errors](common/errors.md)
 * [Permissions](common/permissions.md)
 
 ## Api
 
-* Prefix: `/api/`
+Prefix: `/api/`
 
 ### Admin
 
-* Prefix: `/admin/`
+Prefix: `/admin/`
 
 Endpoints for viewing and manipulating the addresses
 
-* [Retrieve addresses](api/admin/index.md) : `GET /api/admin/addresses`
-* [Create an address](api/admin/create.md) : `POST /api/admin/addresses`
-* [Update an address](api/admin/update.md) : `PUT /api/admin/addresses/:id`
-* [Retrieve an address](api/admin/show.md) : `GET /api/admin/addresses/:id`
-* [Delete an address](api/admin/delete.md) : `DELETE /api/admin/addresses/:id`
+* [Retrieve addresses](api/admin/index.md)
+* [Create an address](api/admin/create.md) 
+* [Update an address](api/admin/update.md)
+* [Retrieve an address](api/admin/show.md)
+* [Delete an address](api/admin/delete.md)
 
 ## Manager
 
 * [Introduction](manager/introduction.md)
+* [Permissions](manager/permissions.md)
 * [Create a new entity](manager/create.md)
 * [Update an entity](manager/update.md)
 * [Remove an entity](manager/remove.md)
