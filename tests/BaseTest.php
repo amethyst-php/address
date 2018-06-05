@@ -22,13 +22,10 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
         $dotenv->load();
 
         parent::setUp();
-
-        $this->artisan('vendor:publish', [
-            '--provider' => 'Railken\LaraOre\AddressServiceProvider',
-            '--force' => true
-        ]);
-
+        
         $this->artisan('migrate:fresh');
+        $this->artisan('vendor:publish', ['--provider' => 'Railken\LaraOre\AddressServiceProvider', '--force' => true]);
+        $this->artisan('lara-ore:user:install');
         $this->artisan('migrate');
     }
 }

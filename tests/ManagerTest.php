@@ -6,7 +6,7 @@ use Railken\Bag;
 use Railken\LaraOre\Address\AddressManager;
 use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
 
-class AddressTest extends BaseTest
+class ManagerTest extends BaseTest
 {
     use ManagerTestableTrait;
 
