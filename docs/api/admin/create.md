@@ -22,7 +22,7 @@ Create a new Address
     "country": "IT",
 }
 ```
-Please refer [/docs/common/attributes.md](here) for the full explanation of parameters
+Please refer [here](/docs/common/attributes.md) for the full explanation of parameters
 
 ## Success Response
 
@@ -67,4 +67,4 @@ Please refer [/docs/common/attributes.md](here) for the full explanation of para
 }
 ```
 
-Please refer [/docs/common/errors.md](here) for the full explanation of errors
+Please refer [here](/docs/common/errors.md) for the full explanation of errors
