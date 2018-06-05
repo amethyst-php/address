@@ -1,14 +1,14 @@
-# Create Address
+# Update Address
 
-Create a new Address
+Update an Address. Update can be performed either fully or partially.
 
-**URL** : `/api/v1/admin/addresses`
+**URL** : `/api/v1/admin/addresses/:id`
 
-**Method** : `POST`
+**Method** : `PUT`
 
 **Auth required** : YES 
 
-**Permissions required** : address.create
+**Permissions required** : address.update
 
 **Data example**
 
@@ -25,8 +25,9 @@ Create a new Address
 Please refer [here](/docs/common/attributes.md) for the full explanation of parameters
 
 ## Success Response
+ 
 
-**Code** : `201 CREATED`
+**Code** : `200 OK`
 
 **Content example**
 
@@ -46,6 +47,10 @@ Please refer [here](/docs/common/attributes.md) for the full explanation of para
 
 ## Error Responses
 
+**Code** : `404 NOT FOUND`
+
+### Or
+
 **Code** : `400 BAD REQUEST`
 
 **Content example**
@@ -54,9 +59,9 @@ Please refer [here](/docs/common/attributes.md) for the full explanation of para
 {
     "errors": [
         {
-            "code": "ADDRESS_NAME_NOT_DEFINED",
+            "code": "ADDRESS_NAME_NOT_VALID",
             "attribute": "name",
-            "message": "The name is required"
+            "message": "The name is not valid"
         }
     ]
 }
