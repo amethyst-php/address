@@ -20,4 +20,4 @@ The package will automatically register itself.
 
 ## Documentation
 
-[Documentation](doc/index.md)
+[Documentation](docs/index.md)

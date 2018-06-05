@@ -74,9 +74,11 @@ Provide name of Address to be created.
 ```json
 {
     "errors": [
-        "code": "ADDRESS_NAME_NOT_DEFINED"
-        "label": "name"
-        "message": "The name is required"
+    	{
+	        "code": "ADDRESS_NAME_NOT_DEFINED"
+	        "label": "name"
+	        "message": "The name is required"
+	    }
     ]
 }
 ```
