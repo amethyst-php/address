@@ -75,8 +75,8 @@ Provide name of Address to be created.
 {
     "errors": [
     	{
-	        "code": "ADDRESS_NAME_NOT_DEFINED"
-	        "label": "name"
+	        "code": "ADDRESS_NAME_NOT_DEFINED",
+	        "label": "name",
 	        "message": "The name is required"
 	    }
     ]
