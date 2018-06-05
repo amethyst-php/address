@@ -17,3 +17,7 @@ composer require railken/lara-ore-address
 ```
 
 The package will automatically register itself.
+
+## Documentation
+
+[Documentation](doc/index.md)
