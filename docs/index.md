@@ -10,16 +10,6 @@ In order to access to the data you have 3 options: api, manager, commands.
 
 ## Api
 
-Prefix: `/api/v1`
-
-### Admin
-
-Requires authentication. Please see [lara-ore-user](https://github.com/railken/lara-ore-user) for more details
-
-Prefix: `/admin`
-
-Endpoints for viewing and manipulating the addresses
-
 * [Retrieve addresses](api/admin/index.md)
 * [Create an address](api/admin/create.md) 
 * [Update an address](api/admin/update.md)
