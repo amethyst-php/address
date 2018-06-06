@@ -30,20 +30,20 @@ Please refer [here](https://github.com/railken/search-query) for the syntax of t
 
 ```json
 {
-	resources: [
-	    {
-	    	"id": 123,
-		    "name": "John Smith",
-		    "street": "Via roma",
-		    "zip_code": "00100",
-		    "city": "Rome",
-		    "province": "RM",
-		    "country": "IT",
-		    "created_at": "2018-01-01 00:00:00",
-		    "updated_at": "2018-01-01 00:00:00"
-		}
-	],
-	pagination: {
+    "resources": [
+        {
+            "id": 123,
+            "name": "John Smith",
+            "street": "Via roma",
+            "zip_code": "00100",
+            "city": "Rome",
+            "province": "RM",
+            "country": "IT",
+            "created_at": "2018-01-01 00:00:00",
+            "updated_at": "2018-01-01 00:00:00"
+        }
+    ],
+    "pagination": {
         "total": 1,
         "skip": 0,
         "take": 10,
@@ -51,7 +51,7 @@ Please refer [here](https://github.com/railken/search-query) for the syntax of t
         "to": 1,
         "page": 1,
         "pages": 1
-	}
+    }
 }
 ```
 
