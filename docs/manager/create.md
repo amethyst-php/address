@@ -3,9 +3,9 @@
 ```php
 use Railken\LaraOre\Address\AddressManager;
 
-$dm = new AddressManager();
+$manager = new AddressManager();
 
-$result = $dm->create([
+$result = $manager->create([
     "name" => "John Smith",
     "street" => "Via roma",
     "zip_code" => "00100",

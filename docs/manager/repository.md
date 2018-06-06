@@ -11,7 +11,7 @@ $repository = $manager->getRepository();
 
 ```
 
-Retrieving an address
+Retrieving an entity
 
 ```php
 $repository->findOneBy(['id' => 1]);
@@ -19,7 +19,7 @@ $repository->findOneById(1);
 
 ```
 
-Retrieving all addresses
+Retrieving all entities
 
 ```php
 $repository->findAll();

@@ -6,9 +6,9 @@ Once you've got the result you should always check if an error has occurred, if 
 
 use Railken\LaraOre\Address\AddressManager;
 
-$dm = new AddressManager();
+$manager = new AddressManager();
 
-$result = $dm->create([
+$result = $manager->create([
     "street" => "Via roma",
     "zip_code" => "00100",
     "city" => "Rome",
