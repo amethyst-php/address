@@ -1,8 +1,14 @@
 # Documentation
 
+## Configuration
+
+
+
+## Data
+
 In order to access to the data you have three options available: api, manager, commands.
 
-## Api
+### Api
 
 * [Retrieve addresses](api/admin/index.md)
 * [Create an address](api/admin/create.md) 
@@ -10,7 +16,7 @@ In order to access to the data you have three options available: api, manager, c
 * [Retrieve an address](api/admin/show.md)
 * [Delete an address](api/admin/delete.md)
 
-## Manager
+### Manager
 
 * [Create a new entity](manager/create.md)
 * [Update an entity](manager/update.md)
@@ -19,12 +25,12 @@ In order to access to the data you have three options available: api, manager, c
 * [Handle the result](manager/result.md)
 * [Permissions](manager/permissions.md)
 
-## Commands
+### Commands
 
-Soon, maybe.
+Soon... maybe...
 
 
-## Common
+### Common
 
 * [Attributes](common/attributes.md)
 * [Errors](common/errors.md)

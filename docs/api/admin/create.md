@@ -1,7 +1,5 @@
 # Create Address
 
-Create a new Address
-
 **URL** : `/api/v1/admin/addresses`
 
 **Method** : `POST`
@@ -32,15 +30,17 @@ Please refer [here](/docs/common/attributes.md) for the full explanation of para
 
 ```json
 {
-    "id": 123,
-    "name": "John Smith",
-    "street": "Via roma",
-    "zip_code": "00100",
-    "city": "Rome",
-    "province": "RM",
-    "country": "IT",
-    "created_at": "2018-01-01 00:00:00",
-    "updated_at": "2018-01-01 00:00:00"
+    "resource": {
+        "id": 123,
+        "name": "John Smith",
+        "street": "Via roma",
+        "zip_code": "00100",
+        "city": "Rome",
+        "province": "RM",
+        "country": "IT",
+        "created_at": "2018-01-01 00:00:00",
+        "updated_at": "2018-01-01 00:00:00"
+    }
 }
 ```
 
