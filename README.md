@@ -3,6 +3,10 @@
 [![Build Status](https://travis-ci.org/railken/lara-ore-address.svg?branch=master)](https://travis-ci.org/railken/lara-ore-address)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+This is a lara-ore package.
+
+Provides the entity [Address](src/Address/Address.php) 
+
 # Requirements
 
 PHP 7.1 and later.
@@ -20,7 +24,7 @@ The package will automatically register itself.
 
 ## Documentation
 
-[Documentation](docs/index.md)
+[Read](docs/index.md)
 
 ## Testing
 
