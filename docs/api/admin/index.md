@@ -57,4 +57,21 @@ Please refer [here](https://github.com/railken/search-query) for the syntax of t
 
 ## Error Responses
 
-**Code** : `404 NOT FOUND`
+**Code** : `400 BAD REQUEST`
+
+**Content example**
+
+```json
+{
+    "errors" : [
+        {
+            code: 'QUERY_SYNTAX_ERROR',
+            message: 'Syntax error'
+        },
+        {
+            code: 'SORT_INVALID_FIELD',
+            message: 'Invalid sorting field'
+        }
+    ]
+}
+```
