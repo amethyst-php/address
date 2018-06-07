@@ -3,7 +3,6 @@
 namespace Railken\LaraOre\Address\Tests;
 
 use Railken\Bag;
-use Railken\LaraOre\Address\AddressManager;
 use Railken\LaraOre\Support\Testing\ApiTestableTrait;
 
 class ApiTest extends BaseTest

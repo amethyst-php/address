@@ -13,7 +13,7 @@ class AddressServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(\Illuminate\Routing\Router $router)
+    public function boot()
     {
         $this->publishes([
             __DIR__.'/../config/ore.address.php' => config_path('ore.address.php'),
@@ -40,6 +40,11 @@ class AddressServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/ore.address.php', 'ore.address');
     }
 
+    /**
+     * Load routes.
+     *
+     * @return void
+     */
     public function loadRoutes()
     {
         Route::group([
