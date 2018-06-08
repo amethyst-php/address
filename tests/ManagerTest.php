@@ -9,7 +9,6 @@ class ManagerTest extends BaseTest
 {
     use ManagerTestableTrait;
 
-
     /**
      * Retrieve basic url.
      *
