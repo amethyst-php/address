@@ -21,7 +21,7 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
      */
     public function getParameters()
     {
-        $bag = new bag();
+        $bag = new Bag();
         $bag->set('name', "El. psy. congroo.");
         $bag->set('street', str_random(40));
         $bag->set('zip_code', '00100');
