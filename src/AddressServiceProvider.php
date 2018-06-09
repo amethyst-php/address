@@ -2,8 +2,8 @@
 
 namespace Railken\LaraOre;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\ServiceProvider;
 use Railken\LaraOre\Api\Support\Router;
 
 class AddressServiceProvider extends ServiceProvider

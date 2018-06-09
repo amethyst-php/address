@@ -13,10 +13,10 @@ return [
     'table' => 'ore_addresses',
 
     'router' => [
-        'prefix' => 'admin/addresses',
+        'prefix'      => 'admin/addresses',
         'middlewares' => [
             \Railken\LaraOre\RequestLoggerMiddleware::class,
             'auth:api',
-        ]
-    ]
+        ],
+    ],
 ];

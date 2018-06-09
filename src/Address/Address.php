@@ -7,7 +7,6 @@ use Railken\Laravel\Manager\Contracts\EntityContract;
 
 class Address extends Model implements EntityContract
 {
-
     /**
      * The table associated with the model.
      *
@@ -22,9 +21,8 @@ class Address extends Model implements EntityContract
      */
     protected $fillable = ['name', 'street', 'city', 'province', 'zip_code', 'country', 'invoiceable'];
 
-
     /**
-     * The attributes that need a cast
+     * The attributes that need a cast.
      *
      * @var array
      */
