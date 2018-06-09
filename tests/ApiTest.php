@@ -17,7 +17,7 @@ class ApiTest extends BaseTest
     {
         return '/api/v1/admin/addresses';
     }
-    
+
     public function signIn()
     {
         $response = $this->post('/api/v1/sign-in', [
@@ -26,7 +26,7 @@ class ApiTest extends BaseTest
         ]);
 
         $access_token = json_decode($response->getContent())->data->access_token;
-        
+
         $this->withHeaders(['Authorization' => 'Bearer '.$access_token]);
 
         return $response;

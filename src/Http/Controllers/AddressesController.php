@@ -2,9 +2,9 @@
 
 namespace Railken\LaraOre\Http\Controllers;
 
+use Railken\LaraOre\Address\AddressManager;
 use Railken\LaraOre\Api\Http\Controllers\RestController;
 use Railken\LaraOre\Api\Http\Controllers\Traits as RestTraits;
-use Railken\LaraOre\Address\AddressManager;
 
 class AddressesController extends RestController
 {
@@ -23,7 +23,7 @@ class AddressesController extends RestController
         'province',
         'country',
         'created_at',
-        'updated_at'
+        'updated_at',
     ];
 
     protected static $fillable = [
@@ -32,7 +32,7 @@ class AddressesController extends RestController
         'zip_code',
         'city',
         'province',
-        'country'
+        'country',
     ];
 
     /**
