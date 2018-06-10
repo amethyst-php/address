@@ -22,11 +22,11 @@ class AddressManager extends ModelManager
      */
     protected $attributes = [
         Attributes\Id\IdAttribute::class,
+        Attributes\Country\CountryAttribute::class,
         Attributes\City\CityAttribute::class,
         Attributes\Street\StreetAttribute::class,
         Attributes\ZipCode\ZipCodeAttribute::class,
         Attributes\Province\ProvinceAttribute::class,
-        Attributes\Country\CountryAttribute::class,
         Attributes\CreatedAt\CreatedAtAttribute::class,
         Attributes\UpdatedAt\UpdatedAtAttribute::class,
         Attributes\Name\NameAttribute::class,

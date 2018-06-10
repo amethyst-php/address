@@ -61,6 +61,11 @@ class CountryAttribute extends BaseAttribute
      */
     public function valid(EntityContract $entity, $value)
     {
-        return v::length(1, 255)->validate($value);
+        try {
+            (new \League\ISO3166\ISO3166)->alpha2($value);
+            return true;
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 }
