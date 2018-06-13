@@ -14,7 +14,7 @@ class AddressesController extends RestController
     use RestTraits\RestShowTrait;
     use RestTraits\RestRemoveTrait;
 
-    protected static $query = [
+    public $queryable = [
         'id',
         'name',
         'street',
@@ -26,7 +26,7 @@ class AddressesController extends RestController
         'updated_at',
     ];
 
-    protected static $fillable = [
+    public $fillable = [
         'name',
         'street',
         'zip_code',
