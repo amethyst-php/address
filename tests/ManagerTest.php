@@ -23,7 +23,5 @@ class ManagerTest extends BaseTest
     public function testSuccessCommon()
     {
         $this->commonTest($this->getManager(), AddressFaker::make());
-
-        $this->getManager()->create(AddressFaker::make());
     }
 }
