@@ -4,6 +4,7 @@ namespace Railken\LaraOre\Address\Tests;
 
 use Railken\LaraOre\Address\AddressManager;
 use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
+use Railken\LaraOre\Address\AddressFaker;
 
 class ManagerTest extends BaseTest
 {
@@ -21,6 +22,8 @@ class ManagerTest extends BaseTest
 
     public function testSuccessCommon()
     {
-        $this->commonTest($this->getManager(), $this->getParameters());
+        $this->commonTest($this->getManager(), AddressFaker::make());
+
+        $this->getManager()->create(AddressFaker::make());
     }
 }
