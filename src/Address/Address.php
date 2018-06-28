@@ -19,14 +19,14 @@ class Address extends Model implements EntityContract
      *
      * @var array
      */
-    protected $fillable = ['name', 'street', 'city', 'province', 'zip_code', 'country', 'invoiceable'];
-
-    /**
-     * The attributes that need a cast.
-     *
-     * @var array
-     */
-    protected $cast = ['invoiceable' => 'boolean'];
+    protected $fillable = [
+        'name',
+        'street',
+        'city',
+        'province',
+        'zip_code',
+        'country'
+    ];
 
     /**
      * Creates a new instance of the model.

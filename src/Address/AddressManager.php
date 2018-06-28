@@ -22,6 +22,7 @@ class AddressManager extends ModelManager
      */
     protected $attributes = [
         Attributes\Id\IdAttribute::class,
+        Attributes\Name\NameAttribute::class,
         Attributes\Country\CountryAttribute::class,
         Attributes\City\CityAttribute::class,
         Attributes\Street\StreetAttribute::class,
@@ -29,8 +30,6 @@ class AddressManager extends ModelManager
         Attributes\Province\ProvinceAttribute::class,
         Attributes\CreatedAt\CreatedAtAttribute::class,
         Attributes\UpdatedAt\UpdatedAtAttribute::class,
-        Attributes\Name\NameAttribute::class,
-        Attributes\Invoiceable\InvoiceableAttribute::class,
     ];
 
     /**
