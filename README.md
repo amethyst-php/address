@@ -4,9 +4,7 @@
 [![StyleCI](https://github.styleci.io/repos/136009551/shield?branch=master)](https://github.styleci.io/repos/136009551)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-This is a lara-ore package.
-
-Provides the entity [Address](src/Address/Address.php) 
+This is a [lara-ore](https://github.com/railken/lara-ore) package
 
 # Requirements
 
