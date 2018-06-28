@@ -8,7 +8,6 @@
         "railken/laravel-manager": "^3.1",
         "railken/lara-ore-api": "dev-master",
         "railken/lara-ore-support": "dev-master",
-        "railken/lara-ore-user": "dev-master",
         "ronanguilloux/isocodes": "^2.1",
         "league/iso3166": "^2.1",
         "fzaninotto/faker": "^1.7"
