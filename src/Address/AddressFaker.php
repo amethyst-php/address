@@ -4,13 +4,19 @@ namespace Railken\LaraOre\Address;
 
 use Railken\Bag;
 use Faker\Factory;
+use Railken\Laravel\Manager\BaseFaker;
 
-class AddressFaker
+class AddressFaker extends BaseFaker
 {
     /**
-     * @return array
+     * @var string
      */
-    public static function make()
+    protected $manager = AddressManager::class;
+
+    /**
+     * @return \Railken\Bag
+     */
+    public function parameters()
     {
         $faker = Factory::create();
         
