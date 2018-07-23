@@ -2,9 +2,9 @@
 
 namespace Railken\LaraOre\Address\Tests;
 
+use Railken\LaraOre\Address\AddressFaker;
 use Railken\LaraOre\Address\AddressManager;
 use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
-use Railken\LaraOre\Address\AddressFaker;
 
 class ManagerTest extends BaseTest
 {

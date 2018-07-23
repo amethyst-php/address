@@ -2,12 +2,11 @@
 
 namespace Railken\LaraOre\Address\Attributes\ZipCode;
 
+use IsoCodes\ZipCode;
 use Railken\LaraOre\Address\Attributes\ZipCode\Exceptions as Exceptions;
 use Railken\Laravel\Manager\Attributes\BaseAttribute;
 use Railken\Laravel\Manager\Contracts\EntityContract;
 use Railken\Laravel\Manager\Tokens;
-use Respect\Validation\Validator as v;
-use IsoCodes\ZipCode;
 
 class ZipCodeAttribute extends BaseAttribute
 {

@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Table
@@ -12,11 +11,21 @@ return [
     */
     'table' => 'ore_addresses',
 
-    'router' => [
-        'prefix'      => '/admin/addresses',
-        'middlewares' => [
-            \Railken\LaraOre\RequestLoggerMiddleware::class,
-            'auth:api',
+    /*
+    |--------------------------------------------------------------------------
+    | Http configuration
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the routes
+    |
+    */
+    'http' => [
+        'admin' => [
+            'enabled'    => true,
+            'controller' => Railken\LaraOre\Http\Controllers\Admin\AddressesController::class,
+            'router'     => [
+                'prefix'      => '/admin/addresses',
+            ],
         ],
     ],
 ];

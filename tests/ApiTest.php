@@ -2,9 +2,9 @@
 
 namespace Railken\LaraOre\Address\Tests;
 
-use Railken\LaraOre\Support\Testing\ApiTestableTrait;
 use Illuminate\Support\Facades\Config;
 use Railken\LaraOre\Address\AddressFaker;
+use Railken\LaraOre\Support\Testing\ApiTestableTrait;
 
 class ApiTest extends BaseTest
 {
@@ -17,13 +17,11 @@ class ApiTest extends BaseTest
      */
     public function getBaseUrl()
     {
-        return Config::get('ore.api.router.prefix').Config::get('ore.address.router.prefix');
+        return Config::get('ore.api.router.prefix').Config::get('ore.address.http.admin.router.prefix');
     }
 
     /**
      * Test common requests.
-     *
-     * @return void
      */
     public function testSuccessCommon()
     {

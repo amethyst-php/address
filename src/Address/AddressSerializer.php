@@ -14,7 +14,7 @@ class AddressSerializer extends ModelSerializer
      * @param EntityContract $entity
      * @param Collection     $select
      *
-     * @return array
+     * @return \Railken\Bag
      */
     public function serialize(EntityContract $entity, Collection $select = null)
     {

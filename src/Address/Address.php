@@ -25,7 +25,7 @@ class Address extends Model implements EntityContract
         'city',
         'province',
         'zip_code',
-        'country'
+        'country',
     ];
 
     /**

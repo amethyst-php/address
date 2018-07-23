@@ -2,6 +2,7 @@
 
 namespace Railken\LaraOre;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use Railken\LaraOre\Api\Support\Router;
@@ -10,8 +11,6 @@ class AddressServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
     public function boot()
     {
@@ -29,8 +28,6 @@ class AddressServiceProvider extends ServiceProvider
 
     /**
      * Register bindings in the container.
-     *
-     * @return void
      */
     public function register()
     {
@@ -42,19 +39,21 @@ class AddressServiceProvider extends ServiceProvider
 
     /**
      * Load routes.
-     *
-     * @return void
      */
     public function loadRoutes()
     {
-        Router::group(array_merge(Config::get('ore.address.router'), [
-            'namespace' => 'Railken\LaraOre\Http\Controllers',
-        ]), function ($router) {
-            $router->get('/', ['uses' => 'AddressesController@index']);
-            $router->post('/', ['uses' => 'AddressesController@create']);
-            $router->put('/{id}', ['uses' => 'AddressesController@update']);
-            $router->delete('/{id}', ['uses' => 'AddressesController@remove']);
-            $router->get('/{id}', ['uses' => 'AddressesController@show']);
-        });
+        $config = Config::get('ore.address.http.admin');
+
+        if (Arr::get($config, 'enabled')) {
+            Router::group('admin', Arr::get($config, 'router'), function ($router) use ($config) {
+                $controller = Arr::get($config, 'controller');
+
+                $router->get('/', ['uses' => $controller.'@index']);
+                $router->post('/', ['uses' => $controller.'@create']);
+                $router->put('/{id}', ['uses' => $controller.'@update']);
+                $router->delete('/{id}', ['uses' => $controller.'@remove']);
+                $router->get('/{id}', ['uses' => $controller.'@show']);
+            });
+        }
     }
 }
