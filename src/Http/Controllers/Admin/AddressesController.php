@@ -2,11 +2,10 @@
 
 namespace Railken\LaraOre\Http\Controllers\Admin;
 
-use Railken\LaraOre\Address\AddressManager;
-use Railken\LaraOre\Api\Http\Controllers\RestController;
+use Railken\LaraOre\Api\Http\Controllers\RestConfigurableController;
 use Railken\LaraOre\Api\Http\Controllers\Traits as RestTraits;
 
-class AddressesController extends RestController
+class AddressesController extends RestConfigurableController
 {
     use RestTraits\RestIndexTrait;
     use RestTraits\RestCreateTrait;
@@ -14,6 +13,18 @@ class AddressesController extends RestController
     use RestTraits\RestShowTrait;
     use RestTraits\RestRemoveTrait;
 
+    /**
+     * The config path.
+     *
+     * @var string
+     */
+    public $config = 'ore.address';
+
+    /**
+     * The attributes that are queryable.
+     *
+     * @var array
+     */
     public $queryable = [
         'id',
         'name',
@@ -26,6 +37,11 @@ class AddressesController extends RestController
         'updated_at',
     ];
 
+    /**
+     * The attributes that are fillable.
+     *
+     * @var array
+     */
     public $fillable = [
         'name',
         'street',
@@ -34,24 +50,4 @@ class AddressesController extends RestController
         'province',
         'country',
     ];
-
-    /**
-     * Construct.
-     */
-    public function __construct(AddressManager $manager)
-    {
-        $this->manager = $manager;
-        $this->manager->setAgent($this->getUser());
-        parent::__construct();
-    }
-
-    /**
-     * Create a new instance for query.
-     *
-     * @return \Illuminate\Database\Query\Builder
-     */
-    public function getQuery()
-    {
-        return $this->manager->repository->getQuery();
-    }
 }

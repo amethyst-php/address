@@ -3,8 +3,17 @@
 namespace Railken\LaraOre\Address;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Config;
 use Railken\Laravel\Manager\Contracts\EntityContract;
 
+/**
+ * @property string $name
+ * @property string $street
+ * @property string $city
+ * @property string $province
+ * @property string $zip_code
+ * @property string $country
+ */
 class Address extends Model implements EntityContract
 {
     /**
@@ -36,6 +45,7 @@ class Address extends Model implements EntityContract
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->table = \Illuminate\Support\Facades\Config::get('ore.address.table');
+        $this->table = Config::get('ore.address.table');
+        $this->fillable = array_merge($this->fillable, array_keys(Config::get('ore.address.attributes')));
     }
 }

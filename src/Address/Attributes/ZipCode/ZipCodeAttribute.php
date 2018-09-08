@@ -54,8 +54,8 @@ class ZipCodeAttribute extends BaseAttribute
     /**
      * Is a value valid ?
      *
-     * @param EntityContract $entity
-     * @param mixed          $value
+     * @param \Railken\LaraOre\Address\Address $entity
+     * @param mixed                            $value
      *
      * @return bool
      */
