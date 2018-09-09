@@ -25,7 +25,7 @@
     },
     "autoload-dev": {
         "psr-4": { 
-            "Railken\\LaraOre\\Address\\Tests\\": "tests/" 
+            "Railken\\LaraOre\\Tests\\": "tests/" 
         }
     },
     "extra": {

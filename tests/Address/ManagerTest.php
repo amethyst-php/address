@@ -1,6 +1,6 @@
 <?php
 
-namespace Railken\LaraOre\Address\Tests;
+namespace Railken\LaraOre\Tests\Address;
 
 use Railken\LaraOre\Address\AddressFaker;
 use Railken\LaraOre\Address\AddressManager;

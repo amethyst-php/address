@@ -1,6 +1,6 @@
 <?php
 
-namespace Railken\LaraOre\Address\Tests;
+namespace Railken\LaraOre\Tests\Address;
 
 abstract class BaseTest extends \Orchestra\Testbench\TestCase
 {
@@ -9,7 +9,7 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
      */
     public function setUp()
     {
-        $dotenv = new \Dotenv\Dotenv(__DIR__.'/..', '.env');
+        $dotenv = new \Dotenv\Dotenv(__DIR__.'/../..', '.env');
         $dotenv->load();
 
         parent::setUp();
