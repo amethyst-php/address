@@ -107,7 +107,7 @@ return [
             'enabled'    => true,
             'controller' => Railken\LaraOre\Http\Controllers\Admin\AddressesController::class,
             'router'     => [
-                'prefix'      => '/admin/addresses',
+                'prefix'      => '/addresses',
             ],
         ],
     ],
