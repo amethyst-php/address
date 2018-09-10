@@ -3,78 +3,91 @@ HOST: http://polls.apiblueprint.org/
 
 # lara-ore-address
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+This is a [lara-ore](https://github.com/railken/lara-ore) package
 
-## Questions Collection [/questions]
+## Addresses Api [/addresses]
 
-### List All Questions [GET]
+### List All Addresses [GET]
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
+        {
+            "data": [
+                {
+                    "type": "addresses",
+                    "id": "1",
+                    "attributes": {
+                        "name": "Prof. Quinten Toy",
+                        "street": "791 Kuphal Manors Suite 140",
+                        "zip_code": "47303",
+                        "city": "D'Amoreland",
+                        "province": "CT",
+                        "country": "US",
+                        "created_at": "2018-09-10 16:22:32",
+                        "updated_at": "2018-09-10 16:22:32"
+                    },
+                    "links": {
+                        "self": "http://polls.apiblueprint.org/api/admin/addresses/1"
                     }
-                ]
+                }
+            ],
+            "meta": {
+                "pagination": {
+                    "total": 1,
+                    "count": 1,
+                    "per_page": 10,
+                    "current_page": 1,
+                    "total_pages": 1
+                }
+            },
+            "links": {
+                "self": "http://polls.apiblueprint.org/api/admin/addresses?page=1",
+                "first": "http://polls.apiblueprint.org/api/admin/addresses?page=1",
+                "last": "http://polls.apiblueprint.org/api/admin/addresses?page=1"
             }
-        ]
+        }
 
-### Create a New Question [POST]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+
+### Create a New Address [POST]
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "name": "Prof. Quinten Toy",
+            "street": "791 Kuphal Manors Suite 140",
+            "zip_code": "47303",
+            "city": "D'Amoreland",
+            "province": "CT",
+            "country": "US"
         }
+
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Location: /addresses/1
 
     + Body
 
+            
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                "data": {
+                    "type": "addresses",
+                    "id": "1",
+                    "attributes": {
+                        "name": "Prof. Quinten Toy",
+                        "street": "791 Kuphal Manors Suite 140",
+                        "zip_code": "47303",
+                        "city": "D'Amoreland",
+                        "province": "CT",
+                        "country": "US",
+                        "created_at": "2018-09-10 16:22:32",
+                        "updated_at": "2018-09-10 16:22:32"
+                    },
+                    "links": {
+                        "self": "http://polls.apiblueprint.org/api/admin/addresses/2"
                     }
-                ]
+                }
             }
