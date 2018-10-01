@@ -17,12 +17,18 @@ class AddressSchema extends Schema
     {
         return [
             Attributes\IdAttribute::make(),
-            Attributes\TextAttribute::make('name'),
-            AmethystAttributes\CountryAttribute::make(),
-            AmethystAttributes\ZipCodeAttribute::make(),
-            Attributes\TextAttribute::make('street'),
-            Attributes\TextAttribute::make('province'),
-            Attributes\TextAttribute::make('city'),
+            Attributes\TextAttribute::make('name')
+                ->setRequired(true),
+            AmethystAttributes\CountryAttribute::make()
+                ->setRequired(true),
+            AmethystAttributes\ZipCodeAttribute::make()
+                ->setRequired(true),
+            Attributes\TextAttribute::make('street')
+                ->setRequired(true),
+            Attributes\TextAttribute::make('province')
+                ->setRequired(true),
+            Attributes\TextAttribute::make('city')
+                ->setRequired(true),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),
