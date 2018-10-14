@@ -12,7 +12,7 @@ class CreateAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::create(Config::get('amethyst.address.managers.address.table'), function (Blueprint $table) {
+        Schema::create(Config::get('amethyst.address.data.address.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('street');
@@ -30,6 +30,6 @@ class CreateAddressesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Config::get('amethyst.address.managers.address.table'));
+        Schema::dropIfExists(Config::get('amethyst.address.data.address.table'));
     }
 }
