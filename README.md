@@ -1,6 +1,7 @@
 # amethyst-address
 
 [![Build Status](https://travis-ci.org/railken/amethyst-address.svg?branch=master)](https://travis-ci.org/railken/amethyst-address)
+![Test Coverage](build/badges/coverage.svg)
 
 [Amethyst](https://github.com/railken/amethyst) package
 

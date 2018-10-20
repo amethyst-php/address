@@ -3,4 +3,5 @@ var/cache
 \.php_cs\.cache
 \.env
 composer\.lock
-build/
+build/reports
+build/logs
