@@ -21,7 +21,7 @@ return [
             'validator'  => Railken\Amethyst\Validators\AddressValidator::class,
             'authorizer' => Railken\Amethyst\Authorizers\AddressAuthorizer::class,
             'faker'      => Railken\Amethyst\Fakers\AddressFaker::class,
-            'manager'    => Railken\Amethyst\Fakers\AddressManager::class,
+            'manager'    => Railken\Amethyst\Managers\AddressManager::class,
         ],
     ],
 
