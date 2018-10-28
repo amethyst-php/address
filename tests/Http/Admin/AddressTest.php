@@ -25,9 +25,9 @@ class AddressTest extends BaseTest
     protected $group = 'admin';
 
     /**
-     * Base path config.
+     * Route name.
      *
      * @var string
      */
-    protected $config = 'amethyst.address.http.admin.address';
+    protected $route = 'admin.address';
 }
