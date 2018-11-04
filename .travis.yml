@@ -31,6 +31,8 @@ env:
 
 before_install:
   - composer clear-cache
+  - composer require --dev friendsofphp/php-cs-fixer
+  - composer require --dev phpstan/phpstan
 
 install:
   - if [[ "$DEPENDENCIES" = 'high' ]]; then travis_retry composer update $DEFAULT_COMPOSER_FLAGS; fi
@@ -47,11 +49,11 @@ before_script:
   - echo 'assert.exception=On' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
 
 script:
-  - ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+  - ./vendor/bin/phpunit --coverage-text --coverage-clover=build/logs/clover.xml
   - ./vendor/bin/phpunit --configuration ./build/travis-ci-fail.xml > /dev/null; if [ $? -eq 0 ]; then echo "SHOULD FAIL"; false; else echo "fail checked"; fi;
   
-after_success:
-    - bash <(curl -s https://codecov.io/bash)
+after_script:
+  - ./vendor/bin/test-reporter
 
 jobs:
   include:
