@@ -36,11 +36,11 @@ return [
     'http' => [
         'admin' => [
             'address' => [
-                'enabled'     => true,
-                'controller'  => Railken\Amethyst\Http\Controllers\Admin\AddressesController::class,
-                'router'      => [
-                    'as'        => 'address.',
-                    'prefix'    => '/addresses',
+                'enabled'    => true,
+                'controller' => Railken\Amethyst\Http\Controllers\Admin\AddressesController::class,
+                'router'     => [
+                    'as'     => 'address.',
+                    'prefix' => '/addresses',
                 ],
             ],
         ],
