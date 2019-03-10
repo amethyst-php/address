@@ -72,9 +72,12 @@ jobs:
       script:
         - ./vendor/bin/php-cs-fixer --diff --dry-run -v fix src
         - ./vendor/bin/php-cs-fixer --diff --dry-run -v fix tests
-    - stage: Documentation
-      provider: pages
-      skip-cleanup: true
-      github-token: $GITHUB_TOKEN
-      local-dir: docs
-      php: 7.1
+        
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: docs
+  php: 7.1
+  on:
+    branch: master
