@@ -75,3 +75,15 @@ jobs:
       script:
         - ./vendor/bin/php-cs-fixer --diff --dry-run -v fix src
         - ./vendor/bin/php-cs-fixer --diff --dry-run -v fix tests
+    - stage: Documentation
+      provider: pages
+      skip-cleanup: true
+      github-token: $GITHUB_TOKEN
+      keep-history: true
+      php: 7.2
+      env: PHPStan
+      install: travis_retry composer update --prefer-dist --prefer-stable
+      before_script:
+        - travis_retry composer update --prefer-dist --prefer-stable
+        - travis_retry composer require railken/amethyst-doc-generator
+        - php artisan amethyst:documentation:publishable
