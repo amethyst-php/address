@@ -80,10 +80,9 @@ jobs:
       skip-cleanup: true
       github-token: $GITHUB_TOKEN
       keep-history: true
-      php: 7.2
-      env: PHPStan
-      install: travis_retry composer update --prefer-dist --prefer-stable
+      php: 7.1
       before_script:
         - travis_retry composer update --prefer-dist --prefer-stable
-        - travis_retry composer require railken/amethyst-doc-generator
+        - cp .env.example .env
+        - ./vendor/bin/phpunit
         - php artisan amethyst:documentation:publishable
