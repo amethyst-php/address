@@ -33,27 +33,24 @@ before_install:
   - composer clear-cache
   - composer require --dev friendsofphp/php-cs-fixer
   - composer require --dev phpstan/phpstan
-
-install:
-  - if [[ "$DEPENDENCIES" = 'high' ]]; then travis_retry composer update $DEFAULT_COMPOSER_FLAGS; fi
-  - if [[ "$DEPENDENCIES" = 'low' ]]; then travis_retry composer update $DEFAULT_COMPOSER_FLAGS --prefer-lowest; fi
-
-before_script:
   - mysql_upgrade -u root 
   - mysql -h localhost -e "CREATE DATABASE homestead;"
   - mysql -h localhost -e "GRANT USAGE ON *.* TO homestead@localhost IDENTIFIED BY 'secret';"
   - mysql -h localhost -e "GRANT ALL PRIVILEGES ON homestead.* TO homestead@localhost;"
   - mysql -h localhost -e "FLUSH PRIVILEGES;"
+
+install:
   - cp .env.example .env
+  - if [[ "$DEPENDENCIES" = 'high' ]]; then travis_retry composer update $DEFAULT_COMPOSER_FLAGS; fi
+  - if [[ "$DEPENDENCIES" = 'low' ]]; then travis_retry composer update $DEFAULT_COMPOSER_FLAGS --prefer-lowest; fi
+
+before_script:
   - echo 'zend.assertions=1' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - echo 'assert.exception=On' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
 
 script:
   - ./vendor/bin/phpunit --coverage-text --coverage-clover=build/logs/clover.xml
   - ./vendor/bin/phpunit --configuration ./build/travis-ci-fail.xml > /dev/null; if [ $? -eq 0 ]; then echo "SHOULD FAIL"; false; else echo "fail checked"; fi;
-  
-after_script:
-  - ./vendor/bin/test-reporter
 
 jobs:
   include:
