@@ -18,7 +18,7 @@ class ZipCodeAttribute extends TextAttribute
     /**
      * Is a value valid ?
      *
-     * @param \Railken\LaraOre\Address\Address $entity
+     * @param \Railken\Amethyst\Models\Address $entity
      * @param mixed                            $value
      *
      * @return bool
