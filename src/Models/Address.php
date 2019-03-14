@@ -21,4 +21,12 @@ class Address extends Model implements EntityContract
         $this->ini('amethyst.address.data.address');
         parent::__construct($attributes);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     */
+    public function geolocation()
+    {
+        return $this->morphOne(GeolocationPoint::class, 'localizable');
+    }
 }
