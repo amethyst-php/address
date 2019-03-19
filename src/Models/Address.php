@@ -3,6 +3,9 @@
 namespace Railken\Amethyst\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Railken\Amethyst\Common\ConfigurableModel;
 use Railken\Lem\Contracts\EntityContract;
@@ -25,7 +28,7 @@ class Address extends Model implements EntityContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
      */
-    public function geolocation()
+    public function geolocation(): MorphOne
     {
         return $this->morphOne(GeolocationPoint::class, 'localizable');
     }
