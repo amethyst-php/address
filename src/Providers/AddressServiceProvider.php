@@ -16,6 +16,8 @@ class AddressServiceProvider extends CommonServiceProvider
     {
         parent::register();
 
-        Config::set('amethyst.geolocation.data.geolocation-point.attributes.localizable.options.'.Address::class, AddressManager::class);
+        $this->app->register(\Railken\Amethyst\Providers\GeolocationServiceProvider::class);
+
+        app('amethyst')->pushMorphRelation('geolocation-point', 'localizable', 'address');
     }
 }
