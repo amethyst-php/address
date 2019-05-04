@@ -14,7 +14,15 @@ class AddressServiceProvider extends CommonServiceProvider
         parent::register();
 
         $this->app->register(\Railken\Amethyst\Providers\GeolocationServiceProvider::class);
+    }
 
+    /**
+     * @inherit
+     */
+    public function boot()
+    {
+    	parent::boot();
+    	
         app('amethyst')->pushMorphRelation('geolocation-point', 'localizable', 'address');
     }
 }
