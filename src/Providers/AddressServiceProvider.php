@@ -21,8 +21,8 @@ class AddressServiceProvider extends CommonServiceProvider
      */
     public function boot()
     {
-    	parent::boot();
-    	
+        parent::boot();
+
         app('amethyst')->pushMorphRelation('geolocation-point', 'localizable', 'address');
     }
 }
