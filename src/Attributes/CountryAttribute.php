@@ -32,4 +32,15 @@ class CountryAttribute extends TextAttribute
             return false;
         }
     }
+
+    /**
+     * Get type.
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return 'Text';
+    }
+
 }

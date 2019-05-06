@@ -25,6 +25,20 @@ class ZipCodeAttribute extends TextAttribute
      */
     public function valid(EntityContract $entity, $value)
     {
-        return ZipCode::validate($value, $entity->country);
+        try {
+            return ZipCode::validate($value, $entity->country);
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+    /**
+     * Get type.
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return 'Text';
     }
 }
