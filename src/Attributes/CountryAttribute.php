@@ -42,5 +42,4 @@ class CountryAttribute extends TextAttribute
     {
         return 'Text';
     }
-
 }
