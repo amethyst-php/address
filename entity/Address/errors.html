@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik|Open Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href='/style.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js'></script>
+  <script>
+  window.onload = function() {
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 30,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <main>
+    <div class="content">
+      <h3>Errors</h3>
+
+<p>List of all errors.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Code</th>
+  <th>Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>ADDRESS_COUNTRY_NOT_DEFINED</td>
+  <td>The COUNTRY is required</td>
+</tr>
+<tr>
+  <td>ADDRESS_COUNTRY_NOT_VALID</td>
+  <td>The COUNTRY is not valid</td>
+</tr>
+<tr>
+  <td>ADDRESS_COUNTRY_NOT_AUTHORIZED</td>
+  <td>You're not authorized, missing COUNTRY permission</td>
+</tr>
+<tr>
+  <td>ADDRESS_ZIP_CODE_NOT_DEFINED</td>
+  <td>The ZIP_CODE is required</td>
+</tr>
+<tr>
+  <td>ADDRESS_ZIP_CODE_NOT_VALID</td>
+  <td>The ZIP_CODE is not valid</td>
+</tr>
+<tr>
+  <td>ADDRESS_ZIP_CODE_NOT_AUTHORIZED</td>
+  <td>You're not authorized, missing ZIP_CODE permission</td>
+</tr>
+<tr>
+  <td>ADDRESS_STREET_NOT_DEFINED</td>
+  <td>The STREET is required</td>
+</tr>
+<tr>
+  <td>ADDRESS_STREET_NOT_VALID</td>
+  <td>The STREET is not valid</td>
+</tr>
+<tr>
+  <td>ADDRESS_STREET_NOT_AUTHORIZED</td>
+  <td>You're not authorized, missing STREET permission</td>
+</tr>
+<tr>
+  <td>ADDRESS_PROVINCE_NOT_DEFINED</td>
+  <td>The PROVINCE is required</td>
+</tr>
+<tr>
+  <td>ADDRESS_PROVINCE_NOT_VALID</td>
+  <td>The PROVINCE is not valid</td>
+</tr>
+<tr>
+  <td>ADDRESS_PROVINCE_NOT_AUTHORIZED</td>
+  <td>You're not authorized, missing PROVINCE permission</td>
+</tr>
+<tr>
+  <td>ADDRESS_CITY_NOT_DEFINED</td>
+  <td>The CITY is required</td>
+</tr>
+<tr>
+  <td>ADDRESS_CITY_NOT_VALID</td>
+  <td>The CITY is not valid</td>
+</tr>
+<tr>
+  <td>ADDRESS_CITY_NOT_AUTHORIZED</td>
+  <td>You're not authorized, missing CITY permission</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p><a href="index.html">Back</a></p>
+
+    </div>
+  </main>
+</body>
+</html>

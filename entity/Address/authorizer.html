@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik|Open Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href='/style.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js'></script>
+  <script>
+  window.onload = function() {
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 30,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <main>
+    <div class="content">
+      <h2>Railken\Amethyst\Authorizers\AddressAuthorizer</h2>
+
+<p>The authorizer is used during any operation that manipulate the data to check if the agent is authorized or not</p>
+
+<h4>Extend the class</h4>
+
+<p>Create the new authorizer in <code>app/Authorizers/AddressAuthorizer</code></p>
+
+<pre><code class="php">namespace App\Authorizers;
+
+use Railken\Amethyst\Authorizers\AddressAuthorizer as Authorizer;
+
+class AddressAuthorizer extends Authorizer {
+    // ...
+}
+</code></pre>
+
+<p>Update the file <code>configs/amethyst.address</code> with the new class</p>
+
+<pre><code class="php">return [
+    'data' =&gt; [
+        'address' =&gt; [
+            'authorizer' =&gt; App\Authorizers\AddressAuthorizer::class,
+        ],
+    ]
+];
+</code></pre>
+
+<hr />
+
+<p><a href="index.html">Back</a></p>
+
+    </div>
+  </main>
+</body>
+</html>
