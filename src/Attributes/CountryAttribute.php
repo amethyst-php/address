@@ -2,9 +2,9 @@
 
 namespace Railken\Amethyst\Attributes;
 
+use League\ISO3166\ISO3166;
 use Railken\Lem\Attributes\EnumAttribute;
 use Railken\Lem\Contracts\EntityContract;
-use League\ISO3166\ISO3166;
 
 class CountryAttribute extends EnumAttribute
 {
@@ -25,7 +25,7 @@ class CountryAttribute extends EnumAttribute
     {
         $options = array_map(function ($item) {
             return $item['alpha2'];
-        }, (new ISO3166)->all());
+        }, (new ISO3166())->all());
 
         parent::__construct($name, $options);
     }
@@ -41,7 +41,7 @@ class CountryAttribute extends EnumAttribute
     public function valid(EntityContract $entity, $value)
     {
         try {
-            (new ISO3166)->alpha2($value);
+            (new ISO3166())->alpha2($value);
 
             return true;
         } catch (\Exception $e) {
