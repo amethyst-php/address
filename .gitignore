@@ -1,7 +1,7 @@
 vendor/
-var/cache
+var/
 \.php_cs\.cache
 \.env
 composer\.lock
-build/reports
-build/logs
+build/
+phpunit\.xml
