@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Railken\Amethyst\Common\ConfigurableModel;
 use Railken\Lem\Contracts\EntityContract;
 
+/**
+ * @property string $country
+ * @property string $zipCode
+ * @property string $street
+ * @property string $province
+ * @property string $city
+ */
 class Address extends Model implements EntityContract
 {
     use SoftDeletes;
