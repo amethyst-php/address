@@ -1,8 +1,8 @@
 <?php
 
-namespace Railken\Amethyst\Providers;
+namespace Amethyst\Providers;
 
-use Railken\Amethyst\Common\CommonServiceProvider;
+use Amethyst\Common\CommonServiceProvider;
 
 class AddressServiceProvider extends CommonServiceProvider
 {
@@ -13,7 +13,7 @@ class AddressServiceProvider extends CommonServiceProvider
     {
         parent::register();
 
-        $this->app->register(\Railken\Amethyst\Providers\GeolocationServiceProvider::class);
+        $this->app->register(\Amethyst\Providers\GeolocationServiceProvider::class);
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Railken\Amethyst\Attributes;
+namespace Amethyst\Attributes;
 
 use League\ISO3166\ISO3166;
 use Railken\Lem\Attributes\EnumAttribute;

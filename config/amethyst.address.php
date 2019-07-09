@@ -14,14 +14,14 @@ return [
         'address' => [
             'table'      => 'amethyst_addresses',
             'comment'    => 'Address',
-            'model'      => Railken\Amethyst\Models\Address::class,
-            'schema'     => Railken\Amethyst\Schemas\AddressSchema::class,
-            'repository' => Railken\Amethyst\Repositories\AddressRepository::class,
-            'serializer' => Railken\Amethyst\Serializers\AddressSerializer::class,
-            'validator'  => Railken\Amethyst\Validators\AddressValidator::class,
-            'authorizer' => Railken\Amethyst\Authorizers\AddressAuthorizer::class,
-            'faker'      => Railken\Amethyst\Fakers\AddressFaker::class,
-            'manager'    => Railken\Amethyst\Managers\AddressManager::class,
+            'model'      => Amethyst\Models\Address::class,
+            'schema'     => Amethyst\Schemas\AddressSchema::class,
+            'repository' => Amethyst\Repositories\AddressRepository::class,
+            'serializer' => Amethyst\Serializers\AddressSerializer::class,
+            'validator'  => Amethyst\Validators\AddressValidator::class,
+            'authorizer' => Amethyst\Authorizers\AddressAuthorizer::class,
+            'faker'      => Amethyst\Fakers\AddressFaker::class,
+            'manager'    => Amethyst\Managers\AddressManager::class,
         ],
     ],
 
@@ -37,7 +37,7 @@ return [
         'admin' => [
             'address' => [
                 'enabled'    => true,
-                'controller' => Railken\Amethyst\Http\Controllers\Admin\AddressesController::class,
+                'controller' => Amethyst\Http\Controllers\Admin\AddressesController::class,
                 'router'     => [
                     'as'     => 'address.',
                     'prefix' => '/addresses',

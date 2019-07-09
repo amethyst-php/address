@@ -1,6 +1,6 @@
 <?php
 
-namespace Railken\Amethyst\Attributes;
+namespace Amethyst\Attributes;
 
 use IsoCodes\ZipCode;
 use Railken\Lem\Attributes\TextAttribute;
@@ -18,7 +18,7 @@ class ZipCodeAttribute extends TextAttribute
     /**
      * Is a value valid ?
      *
-     * @param \Railken\Amethyst\Models\Address $entity
+     * @param \Amethyst\Models\Address $entity
      * @param mixed                            $value
      *
      * @return bool

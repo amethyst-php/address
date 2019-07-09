@@ -1,11 +1,11 @@
 {
-    "name": "railken/amethyst-address",
+    "name": "amethyst/address",
     "keywords": ["api"],
     "license": "MIT",
     "require": {
         "php": ">=7.1",
-        "railken/amethyst-common": "0.1.*",
-        "railken/amethyst-geolocation": "0.1.*",
+        "amethyst/common": "0.1.*",
+        "amethyst/geolocation": "0.1.*",
         "ronanguilloux/isocodes": "^2.1",
         "league/iso3166": "^2.1"
     },
@@ -15,18 +15,18 @@
     },
     "autoload": {
         "psr-4" : {
-            "Railken\\Amethyst\\" : "src/"
+            "Amethyst\\" : "src/"
         }
     },
     "autoload-dev": {
         "psr-4": { 
-            "Railken\\Amethyst\\Tests\\": "tests/" 
+            "Amethyst\\Tests\\": "tests/" 
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Railken\\Amethyst\\Providers\\AddressServiceProvider"
+                "Amethyst\\Providers\\AddressServiceProvider"
             ]
         }
     }
