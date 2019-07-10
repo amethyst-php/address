@@ -19,7 +19,7 @@ class ZipCodeAttribute extends TextAttribute
      * Is a value valid ?
      *
      * @param \Amethyst\Models\Address $entity
-     * @param mixed                            $value
+     * @param mixed                    $value
      *
      * @return bool
      */
