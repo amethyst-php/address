@@ -14,6 +14,7 @@ class CreateAddressesTable extends Migration
     {
         Schema::create(Config::get('amethyst.address.data.address.table'), function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->nullable();
             $table->string('street');
             $table->string('zip_code');
             $table->string('city');
