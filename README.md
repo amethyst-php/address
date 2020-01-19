@@ -1,6 +1,6 @@
 # amethyst-address
 
-[![Build Status](https://travis-ci.org/amethyst-php/address.svg?branch=master)](https://travis-ci.org/amethyst-php/address)
+[![Action Status](https://github.com/amethyst-php/address/workflows/test/badge.svg)](https://github.com/amethyst-php/address/actions)
 
 [Amethyst](https://github.com/amethyst-php/amethyst) package
 
